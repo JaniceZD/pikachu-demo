@@ -83,18 +83,18 @@
   border: 2px solid #000;
 }
 /*
- * 左眼在左边
- */
-.eye.left {
-  right: 50%;
-  margin-right: 90px;
-}
-/*
  * 右眼在右边
  */
 .eye.right {
   left: 50%;
   margin-left: 90px;
+}
+/*
+ * 左眼在左边
+ */
+.eye.left {
+  right: 50%;
+  margin-right: 90px;
 }
 /*
  * 然后，画皮卡丘的脸
@@ -111,13 +111,13 @@
 /*
  * 将脸放到正确的位置
  */
-.face.left {
-  right: 50%;
-  margin-right: 116px;
-}
 .face.right {
   left: 50%;
   margin-left: 116px;
+}
+.face.left {
+  right: 50%;
+  margin-right: 116px;
 }
 /*
  * 上嘴唇
@@ -147,7 +147,42 @@
 /*
  * 下嘴唇
  */
-
+.lowerLip-wrapper {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -150px;
+  height: 110px;
+  width: 300px;
+  overflow: hidden;
+}
+.lowerLip {
+  width: 300px;
+  height: 3500px;
+  background: #990513;
+  border-radius: 200px/2000px;
+  border: 2px solid black;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+/*
+ * 小舌头
+ */
+.lowerLip::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  width: 100px;
+  height: 100px;
+  background: #FC4A62;
+  left: 50%;
+  margin-left: -50px;
+  border-radius: 50px;
+}
+/*
+ * 好了，这只皮卡丘送给你
+ */
     `
 
     writeCode('', code)
